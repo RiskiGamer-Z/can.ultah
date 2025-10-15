@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Selamat Ulang Tahun, Chindy Saifani 💖</title>
+	<meta name="description" content="Situs ucapan ulang tahun romantis dan interaktif untuk Chindy Saifani.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23ff6b81' d='M8 14s6-3.33 6-8a3.5 3.5 0 0 0-6-2.5A3.5 3.5 0 0 0 2 6c0 4.67 6 8 6 8'/%3E%3C/svg%3E">
+</head>
+<body>
+	<canvas id="confetti-canvas" aria-hidden="true"></canvas>
+	<canvas id="fireworks-canvas" aria-hidden="true"></canvas>
+	<div class="hearts" aria-hidden="true"></div>
+
+	<header class="hero" role="banner">
+		<div class="hero__inner">
+			<h1 class="hero__title">Selamat Ulang Tahun</h1>
+			<p class="hero__name">Chindy Saifani</p>
+			<p id="typewriter" class="hero__subtitle" aria-live="polite"></p>
+			<div class="hero__actions">
+				<button id="btn-surprise" class="btn btn--primary">Buka Kejutan ✨</button>
+				<button id="btn-letter" class="btn btn--ghost">Surat Cinta 💌</button>
+				<button id="btn-scroll" class="btn btn--ghost">Jelajahi</button>
+			</div>
+		</div>
+	</header>
+
+	<main id="main" class="main" role="main">
+		<section class="section section--celebration" id="celebration" aria-labelledby="celebration-title">
+			<h2 id="celebration-title" class="section__title">Tiup Lilin</h2>
+			<div class="celebration__wrap">
+				<div class="cake" aria-label="Kue ulang tahun dengan lilin">
+					<div class="cake__plate"></div>
+					<div class="cake__layer cake__layer--base"></div>
+					<div class="cake__layer cake__layer--cream"></div>
+					<div class="cake__layer cake__layer--top"></div>
+					<div class="candles">
+						<div class="candle"><span class="flame"></span></div>
+						<div class="candle"><span class="flame"></span></div>
+						<div class="candle"><span class="flame"></span></div>
+					</div>
+				</div>
+				<div class="celebration__actions">
+					<button id="btn-fireworks" class="btn btn--primary">Nyalakan Kembang Api 🎆</button>
+					<button id="btn-blow" class="btn btn--ghost">Tiup Lilin 🎂</button>
+				</div>
+			</div>
+			<p class="gallery__hint">lilinnya tiup dluuu baru kembang api</p>
+		</section>
+		<section class="section section--reasons" id="reasons" aria-labelledby="reasons-title">
+			<h2 id="reasons-title" class="section__title">Selamat Ulang Tahun Caaannnnnn</h2>
+			<div class="cards">
+				<article class="card">
+					<h3>Cahaya</h3>
+					<p>Sehangat mentari pagi, selalu jadi alasan terbaik untuk semangat.</p>
+				</article>
+				<article class="card">
+					<h3>Tawa</h3>
+					<p>Selalu menenangkan hati dan membuat semangat.</p>
+				</article>
+				<article class="card">
+					<h3>Rumah</h3>
+					<p>Selalu menjadi tempat yang aku rindukan.</p>
+				</article>
+			</div>
+		</section>
+
+		<section class="section section--wishes" id="wishes" aria-labelledby="wishes-title">
+			<h2 id="wishes-title" class="section__title">Titip Ucapan</h2>
+			<form id="wish-form" class="wish-form" autocomplete="off">
+				<label for="wish-input" class="sr-only">Tulis ucapanmu</label>
+				<input id="wish-input" class="input" type="text" maxlength="160" placeholder="Tulis ucapan manis untuk Chindy..." required>
+				<button class="btn btn--primary" type="submit">Kirim 💌</button>
+			</form>
+			<ul id="wish-list" class="wish-list" aria-live="polite"></ul>
+		</section>
+
+		<section class="section section--gallery" id="gallery" aria-labelledby="gallery-title">
+			<h2 id="gallery-title" class="section__title">Random</h2>
+			<div class="gallery">
+				<button class="gallery__item" data-full="assets/img/1.jpg" data-caption="">
+					<img src="assets/img/1.jpg" alt="Kenangan 1" loading="lazy">
+				</button>
+				<button class="gallery__item" data-full="assets/img/2.jpg" data-caption="">
+					<img src="assets/img/2.jpg" alt="Kenangan 2" loading="lazy">
+				</button>
+				<button class="gallery__item" data-full="assets/img/3.jpg" data-caption="">
+					<img src="assets/img/3.jpg" alt="Kenangan 3" loading="lazy">
+				</button>
+                <button class="gallery__item" data-full="assets/img/4.jpg" data-caption="">
+                    <img src="assets/img/4.jpg" alt="Kenangan 4" loading="lazy">
+                </button>
+                <button class="gallery__item" data-full="assets/img/5.jpg" data-caption="">
+                    <img src="assets/img/5.jpg" alt="Kenangan 5" loading="lazy">
+                </button>
+                <button class="gallery__item" data-full="assets/img/6.jpg" data-caption="">
+                    <img src="assets/img/6.jpg" alt="Kenangan 6" loading="lazy">
+                </button>
+			</div>
+		</section>
+	</main>
+
+	<!-- Lightbox viewer -->
+	<div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Tampilan foto">
+		<button class="lightbox__close" aria-label="Tutup">×</button>
+		<img class="lightbox__img" alt="">
+		<p class="lightbox__cap"></p>
+	</div>
+
+	<!-- Surat Cinta Modal -->
+	<div id="letter-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="letter-title">
+		<div class="modal__inner">
+			<button class="modal__close" aria-label="Tutup">×</button>
+			<h2 id="letter-title" class="section__title" style="margin-top:0">Untuk Chindy, di Hari Spesialmu</h2>
+			<div class="modal__content">
+				<p>Chindy cayangg,</p>
+				<p>Di setiap detik yang lewat, aku selalu menemukan alasan baru untuk bersyukur karena kamu ada. Semoga setiap langkahmu dipenuhi damai, setiap mimpimu dipeluk semesta, dan setiap harimu selalu terasa pulang.</p>
+				<p>Makacihhh udah menjadi cahaya yang lembut, tawa yang menenangkan, dan rumah yang aku rindukan.</p>
+				<p>Selamat ulang tahun Caaannnnnn. aku cayang kamuuuu. 💖</p>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer" role="contentinfo">
+		<p>Made with <span aria-label="love" role="img">❤️</span> untuk Chindy Saifani • <button id="btn-music" class="link">Putar Musik</button></p>
+	</footer>
+
+	<audio id="bg-music" preload="auto">
+		<!-- Letakkan file musik di assets/audio/lagu.mp3, atau ganti src di JS -->
+		<source src="" type="audio/mpeg">
+	</audio>
+
+	<script src="assets/js/main.js"></script>
+</body>
+</html>
+
